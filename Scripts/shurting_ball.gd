@@ -20,7 +20,8 @@ func _physics_process(delta: float) -> void:
 	if collision:
 		direction = direction.bounce(collision.get_normal())
 		var newvel = velocity.length()*direction*1.05
-		if newvel.length_squared() < 1000000000:
+		position += newvel*0.01
+		if newvel >= Vector2(-1000,-1000) or newvel <= Vector2(1000,1000):
 			print(newvel)
 			velocity = newvel
 		
