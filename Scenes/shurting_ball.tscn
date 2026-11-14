@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://dtxlbi1475r7t"]
+
+[ext_resource type="Texture2D" uid="uid://xvay73o8f2g" path="res://icon.svg" id="1_0shf3"]
+[ext_resource type="Script" uid="uid://b6yhvh8jdiv1x" path="res://Scripts/shurting_ball.gd" id="1_yss20"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kxuq"]
+radius = 63.1981
+
+[node name="ShurtingBall" type="CharacterBody2D" unique_id=710659917]
+floor_stop_on_slope = false
+floor_block_on_wall = false
+floor_max_angle = 0.0
+script = ExtResource("1_yss20")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=819692258]
+position = Vector2(0, 1)
+texture = ExtResource("1_0shf3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1959741333]
+shape = SubResource("CircleShape2D_4kxuq")
+debug_color = Color(0.9978412, 0, 0.16720474, 0.41960785)

@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://cmm4ej6s3ixmh"]
+
+[ext_resource type="PackedScene" uid="uid://dtxlbi1475r7t" path="res://Scenes/shurting_ball.tscn" id="1_glunj"]
+[ext_resource type="PackedScene" uid="uid://cp01mmq0aqgbt" path="res://Scenes/trail.tscn" id="2_wmwgs"]
+[ext_resource type="Texture2D" uid="uid://cxigd15wg4kty" path="res://Assets/Testbackground.jpg" id="3_t6huv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4kxuq"]
+size = Vector2(144, 694)
+
+[node name="Node2D" type="Node2D" unique_id=888295623]
+
+[node name="ShurtingBall" parent="." unique_id=710659917 instance=ExtResource("1_glunj")]
+z_index = 2
+
+[node name="Camera2D" type="Camera2D" parent="ShurtingBall" unique_id=2108883489]
+
+[node name="Trail" parent="ShurtingBall" unique_id=2125989867 instance=ExtResource("2_wmwgs")]
+
+[node name="Stripwalker" type="Sprite2D" parent="." unique_id=2101513988]
+position = Vector2(50, 7.5)
+scale = Vector2(3.0350585, 1.0040872)
+texture = ExtResource("3_t6huv")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=748890341]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=455468439]
+z_index = 1
+position = Vector2(-245, -53)
+shape = SubResource("RectangleShape2D_4kxuq")
