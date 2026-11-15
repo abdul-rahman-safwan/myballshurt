@@ -7,8 +7,8 @@ _data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 2
 
 [sub_resource type="Gradient" id="Gradient_mti6b"]
-offsets = PackedFloat32Array(0, 0.4814815, 1)
-colors = PackedColorArray(1, 1, 1, 0.21568628, 0.5372549, 0.5372549, 0, 0.47058824, 0, 0, 0, 0.8392157)
+offsets = PackedFloat32Array(0, 0, 0.4814815, 1)
+colors = PackedColorArray(1, 1, 1, 0.21568628, 0, 0, 0, 1, 0.5372549, 0.5372549, 0, 0.47058824, 0.68131965, 0.33073795, 0.062189244, 0.74509805)
 
 [node name="Trail" type="Line2D" unique_id=2125989867]
 top_level = true

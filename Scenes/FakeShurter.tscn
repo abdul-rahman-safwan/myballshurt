@@ -19,5 +19,6 @@ debug_color = Color(1, 0.20319384, 0.45832968, 0.41960785)
 texture = ExtResource("2_nhoqq")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1491050593]
+zoom = Vector2(0.17, 0.17)
 
 [node name="Trail" parent="." unique_id=2125989867 instance=ExtResource("3_ougt0")]

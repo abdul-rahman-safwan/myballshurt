@@ -23,7 +23,7 @@ func _physics_process(delta: float) -> void:
 	#move_and_collide(velocity*delta)
 	var collision = move_and_collide(velocity*delta)
 	#bouncebuffer  = max(bouncebuffer - 1,0)
-	print(velocity)
+	#print(velocity)
 	if collision: #and bouncebuffer == 0:
 		direction = direction.bounce(collision.get_normal()).normalized()
 		#print(direction)
