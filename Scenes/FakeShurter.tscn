@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dwsoihwekcnjq"]
+
+[ext_resource type="Script" uid="uid://dydxa7y0dy3j5" path="res://Scripts/rigid_body_2d.gd" id="1_qw775"]
+[ext_resource type="Texture2D" uid="uid://xvay73o8f2g" path="res://icon.svg" id="2_nhoqq"]
+[ext_resource type="PackedScene" uid="uid://cp01mmq0aqgbt" path="res://Scenes/trail.tscn" id="3_ougt0"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4kxuq"]
+radius = 49.77
+
+[node name="RigidBody2D" type="RigidBody2D" unique_id=83990086]
+lock_rotation = true
+script = ExtResource("1_qw775")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=37933637]
+shape = SubResource("CircleShape2D_4kxuq")
+debug_color = Color(1, 0.20319384, 0.45832968, 0.41960785)
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1284241983]
+texture = ExtResource("2_nhoqq")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1491050593]
+
+[node name="Trail" parent="." unique_id=2125989867 instance=ExtResource("3_ougt0")]

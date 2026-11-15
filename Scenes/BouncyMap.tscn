@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://fq7d2vfolia5"]
 
 [ext_resource type="Texture2D" uid="uid://j8hmqn3lbol8" path="res://Assets/Sillytileset.png" id="1_gx8l0"]
+[ext_resource type="Script" uid="uid://chp1f1ws43k4p" path="res://Scripts/bouncy_map.gd" id="2_yvgrx"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yvgrx"]
 texture = ExtResource("1_gx8l0")
@@ -269,3 +270,5 @@ sources/0 = SubResource("TileSetAtlasSource_yvgrx")
 
 [node name="TileMapLayer" type="TileMapLayer" unique_id=2078029415]
 tile_set = SubResource("TileSet_rmxgb")
+physics_quadrant_size = 1
+script = ExtResource("2_yvgrx")
