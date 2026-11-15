@@ -17,7 +17,7 @@ var maxSpeed = 800
 var speedCost = 40
 var mousepower = 1.5
 var mouseCost = 25
-var mouseredirectiontimer = 100
+var mouseredirectiontimer = 100.0
 
 signal hit(hitpos)
 @export var map: TileMapLayer
@@ -66,12 +66,16 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity * 0.9
 			#apply_force(newvel*delta)
 func _process(delta: float) -> void:
-	print(mouseredirectiontimer/100)
+	var guiscale = mouseredirectiontimer/100.0
+	if guiscale == 0:
+		$"../CanvasLayer/ShurtingIndicator".visible = true
+	else:
+		$"../CanvasLayer/ShurtingIndicator".visible = false
 	if Input.is_action_just_pressed("Click"):
 		if mouseredirectiontimer <= 0:
 			direction = (get_viewport().get_mouse_position() - get_viewport().get_visible_rect().size/2).normalized()
 			velocity = velocity.length()*direction*mousepower
-			mouseredirectiontimer = 100
+			mouseredirectiontimer = 100.0
 		else:
 			print("wwait for timer bruh")
 	elif Input.is_action_just_pressed("Upgrade Ball Size"):
@@ -106,5 +110,5 @@ func _process(delta: float) -> void:
 			mouseCost *= 2
 			mousepower *= 1.25
 			$"../CanvasLayer/MouseCost".text = str("[E] Mouse Shurting Upgrade Cost : ", mouseCost)
-	$"../CanvasLayer/ClickTimer/Sliding".scale.x = 1-(mouseredirectiontimer/100)
+	$"../CanvasLayer/ClickTimer/Sliding".scale.x = 1.0-(mouseredirectiontimer/100.0)
 	mouseredirectiontimer = max(mouseredirectiontimer - 1,0)

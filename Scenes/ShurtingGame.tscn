@@ -39,14 +39,25 @@ text = "[A] Bounce Acceleration Upgrade Cost : 75"
 vertical_alignment = 2
 
 [node name="MouseCost" type="Label" parent="CanvasLayer" unique_id=1196563282]
-offset_left = 5.0
-offset_top = 442.0
-offset_right = 574.0
-offset_bottom = 487.0
+offset_top = 451.0
+offset_right = 569.0
+offset_bottom = 496.0
 theme_override_colors/font_color = Color(0.13945791, 0.6330911, 0.45848918, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 32
-text = "[E] Mouse Shurting Upgrade Cost : 25"
+text = "[E] Shurting Upgrade Cost : 25"
+vertical_alignment = 2
+
+[node name="ShurtingIndicator" type="Label" parent="CanvasLayer" unique_id=930187564]
+z_index = 5
+offset_left = 23.0
+offset_top = 58.0
+offset_right = 281.0
+offset_bottom = 100.0
+theme_override_colors/font_color = Color(0.14117648, 0, 0.45882353, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Left Click to Shurt!"
 vertical_alignment = 2
 
 [node name="SpeedCost" type="Label" parent="CanvasLayer" unique_id=1988840861]
@@ -83,12 +94,12 @@ vertical_alignment = 2
 [node name="ClickTimer" type="ColorRect" parent="CanvasLayer" unique_id=18001712]
 offset_left = 23.0
 offset_top = 67.0
-offset_right = 260.0
+offset_right = 291.0
 offset_bottom = 93.0
 
 [node name="Sliding" type="ColorRect" parent="CanvasLayer/ClickTimer" unique_id=1695868819]
 z_index = 1
 layout_mode = 0
-offset_right = 237.0
+offset_right = 268.0
 offset_bottom = 26.0
 color = Color(0, 0.57254905, 1, 1)
